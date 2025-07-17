@@ -1,0 +1,49 @@
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f4f6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-box {
+  padding: 3rem 3.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  width: 400px;
+}
+
+.login-heading {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.login-subtext {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.google-login-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #4285f4;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  justify-content: center;
+  text-align: center;
+}
+
+.google-login-btn:hover {
+  background-color: #357ae8;
+}
