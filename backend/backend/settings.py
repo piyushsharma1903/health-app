@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-b@2*)x%0!!0w%k-i_3dnb2b)2*j!9(0qb$t)ec7j$0-v0d$0=i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'localhost:8000', '127.0.0.1:8000', 'localhost:3000']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'corsheaders.middleware.CorsMiddleware',  # Add this line for CORS support
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -128,7 +129,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Required for collectstatic
 
+# Optional, but recommended for production
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
